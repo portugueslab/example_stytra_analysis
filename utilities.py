@@ -193,7 +193,7 @@ def _extract_bout(df, s, e, n_segments, i_fish=0, scale=1.0):
     return bout
 
 def extract_bouts(
-    metadata_file,
+    metadata,
     max_interpolate=2,
     window_size=7,
     recalculate_vel=False,
@@ -212,8 +212,6 @@ def extract_bouts(
     :param pad_after: number of frames added after
     :return: list of single bout dataframes
     """
-
-    metadata = Experiment(metadata_file)
 
     df = metadata.behavior_log
 
